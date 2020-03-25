@@ -64,9 +64,12 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Post $post)
     {
-        //
+      if(empty($post)) {
+        abort('404');
+      }
+      return view('post.show', compact('post') );
     }
 
     /**
@@ -75,9 +78,12 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Post $post)
     {
-        //
+      if(empty($post)) {
+        abort('404');
+      }
+      return view('post.edit', compact('post') );
     }
 
     /**
@@ -87,9 +93,20 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Post $post)
     {
-        //
+      if(empty($post)) {
+        abort('404');
+      }
+      $request->validate([
+        'content' => 'required',
+        'author' => 'required|max:255',
+        'content_img' => 'required|URL',
+        'author_img' => 'required|URL',
+      ]);
+      $data = $request->all();
+      $post->update($data);
+      return redirect()->route("posts.index")->with('update', $post );
     }
 
     /**

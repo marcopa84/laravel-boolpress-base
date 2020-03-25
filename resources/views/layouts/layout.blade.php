@@ -28,12 +28,8 @@
 </header>
 
 <main class="margin-top-90">
-    <div class="contaner">
-        <div class="row">
-            <div class="col-12">
-             @yield('content')
-            </div>
-        </div>
+    <div class="container">
+      @yield('content')
     </div>
 </main>
 
