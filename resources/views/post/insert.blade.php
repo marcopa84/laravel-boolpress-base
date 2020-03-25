@@ -16,24 +16,20 @@
         @method('POST')
         @csrf
         <div class="form-group">
-        <label for="marca">Marca:</label>
-        <input type="text" class="form-control" name="marca" placeholder="Inserisci la marca">
+          <label for="content_img">Path immagine profilo:</label>
+          <input type="text" class="form-control" name="content_img" placeholder="Inserisci il path dell'immagine dell'articolo">
         </div>
         <div class="form-group">
-        <label for="modello">Modello:</label>
-        <input type="text" class="form-control" name="modello" placeholder="Inserisci il modello">
+          <label for="content">Testo:</label>
+          <textarea name="content" rows="4" cols="80"></textarea>
         </div>
         <div class="form-group">
-        <label for="peso">peso:</label>
-        <input type="number" min="1" max="300" class="form-control" name="peso" placeholder="Inserisci il peso">
+          <label for="author">Autore:</label>
+          <input type="text" class="form-control" name="author" placeholder="Inserisci l'autore">
         </div>
         <div class="form-group">
-        <label for="prezzo">prezzo:</label>
-        <input type="number"  min="1" max="2999" class="form-control" name="prezzo" placeholder="Inserisci il prezzo">
-        </div>
-        <div class="form-group">
-        <label for="imgurl">Indirizzo dell'immagine:</label>
-        <input type="text" class="form-control" name="imgurl" placeholder="Inserisci il link all'immagine">
+          <label for="author_img">Path immagine profilo:</label>
+          <input type="text" class="form-control" name="author_img" placeholder="Inserisci il path dell'immagine profilo">
         </div>
         <button type="submit" class="btn btn-danger ">Salva</button>
         </form>

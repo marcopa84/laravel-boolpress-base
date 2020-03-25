@@ -36,7 +36,26 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $data = $request->all();
+      $request->validate([
+        'content' => 'required',
+        'author' => 'required|max:255',
+        'content_img' => 'required|URL',
+        'author_img' => 'required|URL',
+      ]);
+      $newpost = new Post;
+      $newpost->content = $data['content'];
+      $newpost->author = $data['author_img'];
+      $newpost->content_img = $data['content_img'];
+      $newpost->author_img = $data['author_img'];
+
+      $saved = $newpost->save();
+
+      if ($saved) {
+          return redirect()->route("posts.index")->with('insert', $newpost );;
+      } else {
+          return back();
+      }
     }
 
     /**

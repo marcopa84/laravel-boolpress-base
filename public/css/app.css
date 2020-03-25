@@ -10882,12 +10882,12 @@ a.text-dark:focus {
   }
 }
 
-.post_img_top {
-  width: auto;
-}
-
 .logo_img {
   width: 300px;
+}
+
+.post_img_top {
+  width: auto;
 }
 
 .post_footer {

@@ -9,7 +9,7 @@
   @endif
 
   @if (session('insert'))
-    <div class="alert alert-primary" role="alert">Hai inserito un nuovo record id:{{session('insert')->id}}}}</div>
+    <div class="alert alert-primary" role="alert">Hai inserito un nuovo record id:{{session('insert')->id}}</div>
   @endif
 
   @if (session('update'))

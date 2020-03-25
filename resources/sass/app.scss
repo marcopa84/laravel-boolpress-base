@@ -1,13 +1,14 @@
 //
 @import "node_modules/bootstrap/scss/bootstrap";
 
+.logo_img{
+  width: 300px;
+}
+
 .post_img_top{
   width: auto;
 }
 
-.logo_img{
-  width: 300px;
-}
 .post_footer{
   display: flex;
   justify-content: space-between;
