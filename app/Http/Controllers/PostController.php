@@ -45,7 +45,7 @@ class PostController extends Controller
       ]);
       $newpost = new Post;
       $newpost->content = $data['content'];
-      $newpost->author = $data['author_img'];
+      $newpost->author = $data['author'];
       $newpost->content_img = $data['content_img'];
       $newpost->author_img = $data['author_img'];
 
@@ -115,8 +115,16 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Post $post)
     {
-        //
+      if(empty($post)) {
+        abort('404');
+      }
+
+        $deleted = $post->delete();
+
+      if ($deleted) {
+        return redirect()->route("posts.index")->with('delete', $post );
+      }
     }
 }
