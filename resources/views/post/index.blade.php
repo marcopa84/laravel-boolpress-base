@@ -2,19 +2,11 @@
 
 
 @section('content')
+    <div class="row justify-content-center">
+      <a class="btn btn-primary" href="{{route('posts.create')}}">Aggiungi un post</a>
+    </div>
 
 
-  @if (session('delete'))
-    <div class="alert alert-danger" role="alert">Hai cancellato il record {{session('delete')->id}}</div>
-  @endif
-
-  @if (session('insert'))
-    <div class="alert alert-primary" role="alert">Hai inserito un nuovo record id:{{session('insert')->id}}</div>
-  @endif
-
-  @if (session('update'))
-    <div class="alert alert-success" role="alert">Hai aggiornato il record {{session('update')->id}}</div>
-  @endif
     <div class="row">
       @foreach ($posts as $post)
           <div class="col mb-4">

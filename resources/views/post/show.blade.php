@@ -2,6 +2,8 @@
 
 
 @section('content')
+<div class="row">
+  <div class="col-3"></div>
   <div class="col-6">
     <div class="card">
     <img src="{{$post->content_img}}" class="card-img-top post_img_top" alt="...">
@@ -17,4 +19,6 @@
     </div>
   </div>
   </div>
+</div>
+  
 @endsection
