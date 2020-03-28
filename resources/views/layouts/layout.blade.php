@@ -16,8 +16,8 @@
                         <a class="btn btn-outline-primary" href="{{route('home')}}">Home</a>
                     </li>
 
-                    <li class="nav-item">
-                      <a class="btn btn-outline-success" href="{{route('posts.index')}}">Post</a>
+                    <li class="nav-item d-flex">
+                      <a class="btn btn-outline-success" href="{{route('posts.index')}}">Post</a><p><-no relations with entity</p>
                     </li>
                     
                     <li class="nav-item">

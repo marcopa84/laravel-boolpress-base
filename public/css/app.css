@@ -10890,6 +10890,10 @@ a.text-dark:focus {
   width: auto;
 }
 
+.photo-img {
+  width: 250px;
+}
+
 .post_footer {
   display: flex;
   justify-content: space-between;
