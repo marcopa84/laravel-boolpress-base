@@ -9,7 +9,7 @@
     <img src="{{$photo->photo_path}}" class="card-img-top post_img_top" alt="...">
     <div class="card-footer text-center">
         id: {{$photo->id}}<br>
-        scattata da : {{$photo->user->name}}<br>
+        scattata da : <a href="{{route('users.show', $photo->user)}}">{{$photo->user->name}}</a><br>
         contatto : {{$photo->user->email}}<br>
     </div>
   </div>

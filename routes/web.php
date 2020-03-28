@@ -21,5 +21,6 @@ Route::get('/', 'PostController@index')->name('home');
 // Route::post('/photo/user', 'PhotoController@photo_user')->name('photo.photo_user');
 
 Route::resource('posts', 'PostController');
-Route::resource('photo', 'PhotoController');
-Route::resource('user', 'UserController');
+Route::resource('photos', 'PhotoController');
+Route::get('/photobyuser/{id}', 'PhotoController@photo_byuser')->name('photo_byuser');
+Route::resource('users', 'UserController');

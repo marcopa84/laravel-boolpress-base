@@ -21,9 +21,7 @@
         </div>
         <div class="form-group">
           <label for="content">Testo:</label>
-          <textarea name="content" rows="4" cols="80">
-            {{$post->content}}
-          </textarea>
+          <textarea name="content" rows="4" cols="80">{{$post->content}}</textarea>
         </div>
         <div class="form-group">
           <label for="author">Autore:</label>

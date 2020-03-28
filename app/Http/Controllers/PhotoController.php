@@ -89,18 +89,12 @@ class PhotoController extends Controller
     {
         //
     }
-    // public function photo_user(Request $request)
-    // {
-    //     $photos = $request->all();
-    //     dd($photos);
-    //     return view('photo.index', compact('photos'));
-    // }
+    public function photo_byuser($UserId)
+    {
+        $photos = Photo::all()->where('user_id', $UserId);
+        return view('photo.index', compact('photos'));
+    }
     
-    // public function photo_user(Request $request)
-    // {
-    //     $photos = $request->all();
-    //     dd($photos);
-    //     return view('photo.index', compact('photos'));
-    // }
+
     
 }

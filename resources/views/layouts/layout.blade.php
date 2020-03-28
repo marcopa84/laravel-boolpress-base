@@ -21,11 +21,11 @@
                     </li>
                     
                     <li class="nav-item">
-                      <a class="btn btn-outline-success" href="{{route('photo.index')}}">Photo</a>
+                      <a class="btn btn-outline-success" href="{{route('photos.index')}}">Photo</a>
                     </li>
                     
                     <li class="nav-item">
-                      <a class="btn btn-outline-success" href="{{route('user.index')}}">User</a>
+                      <a class="btn btn-outline-success" href="{{route('users.index')}}">User</a>
                     </li>
 
                 </ul>
